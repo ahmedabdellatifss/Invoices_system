@@ -29,7 +29,7 @@
 					<li class="slide">
 						<a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 5H5v14h14V5zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" opacity=".3"/><path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5V5zm2 5h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg><span class="side-menu__label">الفواتير</span><i class="angle fe fe-chevron-down"></i></a>
 						<ul class="slide-menu">
-							<li><a class="slide-item" href="{{ url('/' . $page='chart-morris') }}">قائمة الفواتير</a></li>
+							<li><a class="slide-item" href="{{ url('/' . $page='invoices') }}">قائمة الفواتير</a></li>
 							<li><a class="slide-item" href="{{ url('/' . $page='chart-flot') }}">الفواتير المدفوعة</a></li>
 							<li><a class="slide-item" href="{{ url('/' . $page='chart-chartjs') }}">الفواتير الغير مدفوعة</a></li>
 							<li><a class="slide-item" href="{{ url('/' . $page='chart-echart') }}">الفواتير المدفوعة جزئيا</a></li>
@@ -62,21 +62,6 @@
 							<li><a class="slide-item" href="{{ url('/' . $page='editprofile') }}">اضافة منتج</a></li>
 						</ul>
 					</li>
-
-					<li class="slide">
-						<a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 20h12V10H6v10zm6-7c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z" opacity=".3"/><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg><span class="side-menu__label">Custom Pages</span><i class="angle fe fe-chevron-down"></i></a>
-						<ul class="slide-menu">
-							<li><a class="slide-item" href="{{ url('/' . $page='signin') }}">Sign In</a></li>
-							<li><a class="slide-item" href="{{ url('/' . $page='signup') }}">Sign Up</a></li>
-							<li><a class="slide-item" href="{{ url('/' . $page='forgot') }}">Forgot Password</a></li>
-							<li><a class="slide-item" href="{{ url('/' . $page='reset') }}">Reset Password</a></li>
-							<li><a class="slide-item" href="{{ url('/' . $page='lockscreen') }}">Lockscreen</a></li>
-							<li><a class="slide-item" href="{{ url('/' . $page='underconstruction') }}">UnderConstruction</a></li>
-							<li><a class="slide-item" href="{{ url('/' . $page='404') }}">404 Error</a></li>
-							<li><a class="slide-item" href="{{ url('/' . $page='500') }}">500 Error</a></li>
-						</ul>
-					</li>
-
 				</ul>
 			</div>
 		</aside>
