@@ -79,7 +79,7 @@
                     <table id="example" class="table key-buttons text-md-nowrap">
                         <thead>
                             <tr>
-                                <th class="border-bottom-0">#</th>
+                                <th class="border-bottom-0">م</th>
                                 <th class="border-bottom-0">اسم القسـم</th>
                                 <th class="border-bottom-0">الوصـف </th>
                                 <th class="border-bottom-0">العمليات </th>
