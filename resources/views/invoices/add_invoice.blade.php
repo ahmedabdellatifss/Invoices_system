@@ -242,10 +242,15 @@
             var Discount = parseFloat(document.getElementById("Discount").value);
             var Rate_VAT = parseFloat(document.getElementById("Rate_VAT").value);
             var Value_VAT = parseFloat(document.getElementById("Value_VAT").value);
+
             var Amount_Commission2 = Amount_Commission - Discount;
+
             if (typeof Amount_Commission === 'undefined' || !Amount_Commission) {
+
                 alert('يرجي ادخال مبلغ العمولة ');
+
             } else {
+
                 var intResults = Amount_Commission2 * Rate_VAT / 100;
                 var intResults2 = parseFloat(intResults + Amount_Commission2);
                 sumq = parseFloat(intResults).toFixed(2);

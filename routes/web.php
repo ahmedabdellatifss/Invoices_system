@@ -18,7 +18,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Auth::routes();
+//Auth::routes();
+
+Auth::routes(['register' => false]);  //to stop the route for register if we need to denied the register form the website
 
 Route::get('/home', 'HomeController@index')->name('home');
 
