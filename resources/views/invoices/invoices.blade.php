@@ -153,18 +153,13 @@
 
                                                         <a class="dropdown-item"
                                                             href=""><i
-                                                                class=" text-success fas
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    fa-money-bill"></i>&nbsp;&nbsp;تغير
-                                                            حالة
-                                                            الدفع</a>
-
+                                                                class=" text-success fas fa-money-bill"></i>&nbsp;&nbsp;تغير حالةالدفع</a>
 
 
                                                         <a class="dropdown-item" href="#" data-invoice_id="{{ $invoice->id }}"
                                                             data-toggle="modal" data-target="#Transfer_invoice"><i
                                                                 class="text-warning fas fa-exchange-alt"></i>&nbsp;&nbsp;نقل الي
                                                             الارشيف</a>
-
 
 
                                                         <a class="dropdown-item" href="Print_invoice/{{ $invoice->id }}"><i

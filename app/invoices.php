@@ -4,11 +4,13 @@ namespace App;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class invoices extends Model
 {
     // protected $guarded = [];
 
+    use SoftDeletes;
     protected $fillable = [
         'invoice_number',
         'invoice_Date',
@@ -27,7 +29,7 @@ class invoices extends Model
         'Payment_Date',
     ];
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at'];  // you can do without it
 
     public function section(){
 
