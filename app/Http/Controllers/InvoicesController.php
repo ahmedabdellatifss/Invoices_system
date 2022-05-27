@@ -9,6 +9,8 @@ use App\invoices_details;
 use App\invoice_attachments;
 use App\Notifications\AddInvoice;
 use Illuminate\Http\Request;
+use App\Exports\InvoicesExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -95,8 +97,8 @@ class InvoicesController extends Controller
             $request->pic->move(public_path('Attachments/' . $invoice_number), $imageName);
         }
 
-        $user = User::first();
-        Notification::send($user, new AddInvoice($invoice_id));
+        // $user = User::first();
+        // Notification::send($user, new AddInvoice($invoice_id));
         session()->flash('Add', 'تم اضافة الفاتورة بنجاح');
         return back();
     }
@@ -270,5 +272,11 @@ class InvoicesController extends Controller
     {
         $invoices = invoices::where('id', $id)->first();
         return view('invoices.Print_invoice',compact('invoices'));
+    }
+
+    public function export()
+    {
+
+        return Excel::download(new InvoicesExport, 'Invoices.xlsx');
     }
 }
