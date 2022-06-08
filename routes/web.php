@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 //Auth::routes();
 
-Auth::routes(['register' => false]);  //to stop the route for register if we need to denied the register form the website
+Auth::routes(['register' => true]);  //to stop the route for register if we need to denied the register form the website
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -59,5 +59,10 @@ Route::get('Invoice_Partial','InvoicesController@Invoice_Partial');
 Route::get('Print_invoice/{id}','InvoicesController@Print_invoice');
 
 Route::get('export_invoices', 'InvoicesController@export');
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles','RoleController');
+    Route::resource('users','UserController');
+});
 
 Route::get('/{page}' , 'AdminController@index');
