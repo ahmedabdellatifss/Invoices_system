@@ -60,9 +60,20 @@ Route::get('Print_invoice/{id}','InvoicesController@Print_invoice');
 
 Route::get('export_invoices', 'InvoicesController@export');
 
+
 Route::group(['middleware' => ['auth']], function() {
+
     Route::resource('roles','RoleController');
     Route::resource('users','UserController');
+
 });
+
+
+Route::get('invoices_report' , 'Invoices_report@index');
+Route::post('search_invoices' , 'Invoices_report@search_invoices');
+
+Route::get('customers_report', 'Customers_Reports_controller@index')->name("customers_report");
+Route::post('Search_customers', 'Customers_Reports_controller@Search_customers');
+
 
 Route::get('/{page}' , 'AdminController@index');
